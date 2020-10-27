@@ -1,0 +1,17 @@
+.boutons {
+  background-color: #87CEFA;
+  align-items: center;
+  justify-content: center;
+}
+
+.texte {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-right: 15em;
+  margin-left: 15em;
+  padding: 2em;
+  border-radius: 7px;
+}
