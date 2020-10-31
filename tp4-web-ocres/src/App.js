@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import Boutons from './Components/boutons';
 import FicheProfile from './Components/ficheProfile';
+import Csuper from './Components/cSuper';
+import CDG from './images/CDG.jpg';
+import JD from './images/JD.jpg';
+import NB from './images/NB.jpg';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,20 +17,20 @@ class App extends React.Component {
         {
           prenom: 'Napoleon',
           nom: 'Bonaparte',
-          date: new Date('1804').toLocaleString(),
-          image: 'NB.jpg'
+          date: '1804',
+          image: NB
         },
         {
           prenom: 'Jeanne',
           nom: 'Darc',
-          date: new Date('1412').toLocaleString(),
-          image: 'JD.jpg'
+          date: '1412',
+          image: JD
         },
         {
           prenom: 'Charles',
           nom: 'De Gaulle',
-          date: new Date('1959').toLocaleString(),
-          image: 'CDG.jpg'
+          date:'1959',
+          image: CDG
         }
         ];
 
@@ -45,6 +49,7 @@ class App extends React.Component {
           </div>
         </header>
         <FicheProfile profil={this.profils[this.state.num]} />
+        <Csuper/>
     </div>
     );
   }

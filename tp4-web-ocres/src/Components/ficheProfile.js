@@ -1,17 +1,18 @@
 import React from 'react';
 import './ficheProfile.css';
+import Moment from 'moment';
 
 class FicheProfile extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {style: "blue"};
+        this.state = {style: "#ffde75"};
       }
 
-      backgroundColors= ["blue",
-                         "grey",
-                         "red",];
+      backgroundColors= ["#ffde75",
+                         "#40826d",
+                         "#ffe4c4",];
 
-    getStyle = () => {
+      getStyle = () => {
         var newStyle = "";
         do{
             newStyle = this.backgroundColors[Math.floor(Math.random() * this.backgroundColors.length)];
@@ -19,21 +20,23 @@ class FicheProfile extends React.Component{
         this.setState({
             style : newStyle
         });
-    }
+      }
 
-    render(){
+      render(){
         return (
             <div className="texte" style={{backgroundColor: this.state.style}}>
                 <div>
-                  <img src="CDG.jpg" fluid alt=''/>
+                  <img className="affichage" src={this.props.profil.image}/>
                 </div>
-                <p>{this.props.profil.prenom}</p>
-                <p>{this.props.profil.nom}</p>
-                <p>{this.props.profil.date}</p>
+                <div className="identite">
+                  <p>Prénom : {this.props.profil.prenom}</p>
+                  <p>Nom : {this.props.profil.nom}</p>
+                </div>
+                <p className="date">Date de naissance : {this.props.profil.date}</p>
                 <button className="boutons" onClick={this.getStyle}>Change style</button>
             </div>
-        );
+          );
+      }
     }
-}
 
 export default FicheProfile;

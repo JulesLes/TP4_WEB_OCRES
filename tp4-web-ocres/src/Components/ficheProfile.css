@@ -1,17 +1,32 @@
 .boutons {
-  background-color: #87CEFA;
-  align-items: center;
-  justify-content: center;
+  background-color: #FFF;
+  float: right;
 }
 
 .texte {
-  color: white;
+  color: black;
   align-items: center;
   justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-right: 15em;
-  margin-left: 15em;
+  margin-right: 25em;
+  margin-left: 25em;
   padding: 2em;
   border-radius: 7px;
+  margin-bottom: 1em;
+}
+
+.affichage {
+  height: 288px;
+  width: 240px;
+}
+
+.identite {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.date {
+  text-align: start;
+  margin-left: 2em;
 }
