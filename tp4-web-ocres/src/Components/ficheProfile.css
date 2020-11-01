@@ -1,22 +1,24 @@
 .boutons {
   background-color: #FFF;
   float: right;
+  font-size: 0.65em;
 }
 
 .texte {
-  color: black;
   align-items: center;
   justify-content: center;
-  margin-right: 25em;
-  margin-left: 25em;
+  margin-right: 4em;
+  margin-left: 4em;
   padding: 2em;
+  font-size: 2vmin;
   border-radius: 7px;
-  margin-bottom: 1em;
+  margin-bottom: 0.7em;
 }
 
 .affichage {
-  height: 288px;
-  width: 240px;
+ width: 100%;
+ max-width: 240px;
+ height: auto;
 }
 
 .identite {

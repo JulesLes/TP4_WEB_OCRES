@@ -1,0 +1,18 @@
+.inc1 {
+  justify-content: center;
+  font-size: 0.5em;
+}
+
+.inc {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.fond {
+  flex-direction: row;
+  justify-content: center;
+  background: #556b2f;
+  margin-right: 4em;
+  margin-left: 4em;
+  border-radius: 7px;
+}

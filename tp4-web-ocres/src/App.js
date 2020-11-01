@@ -18,19 +18,22 @@ class App extends React.Component {
           prenom: 'Napoleon',
           nom: 'Bonaparte',
           date: '1804',
-          image: NB
+          image: NB,
+          super: 0
         },
         {
           prenom: 'Jeanne',
           nom: 'Darc',
           date: '1412',
-          image: JD
+          image: JD,
+          super: 0
         },
         {
           prenom: 'Charles',
           nom: 'De Gaulle',
           date:'1959',
-          image: CDG
+          image: CDG,
+          super: 0
         }
         ];
 
@@ -49,7 +52,7 @@ class App extends React.Component {
           </div>
         </header>
         <FicheProfile profil={this.profils[this.state.num]} />
-        <Csuper/>
+        <Csuper profil={this.state.num}/>
     </div>
     );
   }

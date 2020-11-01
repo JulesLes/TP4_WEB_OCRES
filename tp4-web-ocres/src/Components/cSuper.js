@@ -1,25 +1,57 @@
 import React from 'react';
+import './cSuper.css';
 
 class Csuper extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      count: 0
+      countNb: 0,
+      countCdg:0,
+      countJd:0
     };
   }
 
   increment() {
-        this.setState({
-          count: this.state.count + 1
-        });
+    let profil = this.props.profil;
+    if (profil == 0) {
+      this.setState({
+        countNb: this.state.countNb + 1
+      });
+    }
+    else if (profil == 1) {
+      this.setState({
+        countCdg: this.state.countCdg+ 1
+      });
+    }
+    else if (profil == 2) {
+      this.setState({
+        countJd: this.state.countJd + 1
+      });
+    }
+  };
+
+  afficher(profil){
+    if (profil == 0) {
+      return <p> {this.state.countNb} </p>;
+    }
+
+    else if (profil == 1) {
+      return <p> {this.state.countCdg} </p>;
+    }
+    else if (profil == 2) {
+      return <p> {this.state.countJd} </p>;
+    }
+    else {
+      return <h1>erreure</h1>
+    }
   };
 
   render(){
       return (
-        <div>
-          <button className='inc' onClick={(e) => this.increment(e)}>C'est Super 👍</button>
-            <h1>Nombre de Like : {this.state.count}</h1>
+        <div className='fond'>
+          <button className='inc1' onClick={() => this.increment()}>C'est Super 👍</button>
+            <h1 className='inc'>Like :{this.afficher(this.props.profil)}</h1>
         </div>
       );
   }
